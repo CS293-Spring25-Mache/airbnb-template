@@ -50,32 +50,32 @@
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-<div class="col">
-    <div class="card shadow-sm">
-        <img src="https://a0.muscache.com/pictures/miso/Hosting-595680673819411804/original/a6e6fda5-2935-4e2e-ba34-2fc50bba5cf3.jpeg">
-
-        <div class="card-body">
-            <h5 class="card-title">1922 Craftsman Compound in Laurelhurst ~ Sleeps 12</h5>
-            <p class="card-text">Kerns neighborhood</p>
-            <p class="card-text">Entire home/apt</p>
-            
-            <p class="card-text">Accommodates 12</p>
-
-            <p class="card-text align-bottom">
-            <i class="bi bi-star-fill"></i><span class=""> 5.00</span>
-            </p>
-
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                    <button type="button" id="3301" class="btn btn-sm btn-outline-secondary viewListing" data-bs-toggle="modal" data-bs-target="#fakeAirbnbnModal">View</button>
-    
-                </div>
-                <small class="text-muted">$960.00</small>
-
-            </div>
-        </div>
-    </div><!--.card-->
-</div><!--.col-->
+              <div class="col">
+                  <div class="card shadow-sm">
+                      <img src="https://a0.muscache.com/pictures/miso/Hosting-595680673819411804/original/a6e6fda5-2935-4e2e-ba34-2fc50bba5cf3.jpeg">
+              
+                      <div class="card-body">
+                          <h5 class="card-title">1922 Craftsman Compound in Laurelhurst ~ Sleeps 12</h5>
+                          <p class="card-text">Kerns neighborhood</p>
+                          <p class="card-text">Entire home/apt</p>
+                          
+                          <p class="card-text">Accommodates 12</p>
+              
+                          <p class="card-text align-bottom">
+                          <i class="bi bi-star-fill"></i><span class=""> 5.00</span>
+                          </p>
+              
+                          <div class="d-flex justify-content-between align-items-center">
+                              <div class="btn-group">
+                                  <button type="button" id="3301" class="btn btn-sm btn-outline-secondary viewListing" data-bs-toggle="modal" data-bs-target="#fakeAirbnbnModal">View</button>
+                  
+                              </div>
+                              <small class="text-muted">$960.00</small>
+              
+                          </div>
+                      </div>
+                  </div><!--.card-->
+              </div><!--.col-->
 
 
 
