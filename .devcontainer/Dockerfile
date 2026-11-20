@@ -1,10 +1,18 @@
-FROM mcr.microsoft.com/vscode/devcontainers/php:8-bullseye
+FROM mcr.microsoft.com/devcontainers/php:8.3-bookworm
 
-# update apt
-RUN apt update
+# Fix expired Yarn GPG key (upstream issue)
+RUN curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg \
+    | gpg --dearmor -o /usr/share/keyrings/yarn.gpg \
+ && echo "deb [signed-by=/usr/share/keyrings/yarn.gpg] https://dl.yarnpkg.com/debian stable main" \
+    > /etc/apt/sources.list.d/yarn.list
 
-# install httpie
-RUN apt install -y httpie
+# update apt and install httpie in one layer
+RUN apt-get update \
+ && apt-get install -y --no-install-recommends httpie \
+ && rm -rf /var/lib/apt/lists/*
+
+
+
 
 # install flyway
 WORKDIR /usr/local
