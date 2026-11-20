@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/devcontainers/php:8.3-bookworm
 
 # Fix expired Yarn GPG key (upstream issue)
 RUN curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg \
-    | gpg --dearmor -o /usr/share/keyrings/yarn.gpg \
+    | gpg --batch --yes --dearmor -o /usr/share/keyrings/yarn.gpg \
  && echo "deb [signed-by=/usr/share/keyrings/yarn.gpg] https://dl.yarnpkg.com/debian stable main" \
     > /etc/apt/sources.list.d/yarn.list
 
@@ -10,18 +10,6 @@ RUN curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg \
 RUN apt-get update \
  && apt-get install -y --no-install-recommends httpie \
  && rm -rf /var/lib/apt/lists/*
-
-
-# Fix expired Yarn GPG key (upstream issue)
-RUN curl -fsSL https://dl.yarnpkg.com/debian/pubkey.gpg \
-    | gpg --dearmor -o /usr/share/keyrings/yarn.gpg \
- && echo "deb [signed-by=/usr/share/keyrings/yarn.gpg] https://dl.yarnpkg.com/debian stable main" \
-    > /etc/apt/sources.list.d/yarn.list
-
-# update apt
-RUN apt update
-
-
 
 # install flyway
 WORKDIR /usr/local
